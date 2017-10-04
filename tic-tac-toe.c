@@ -55,3 +55,20 @@ void player_turn()
         matrix[x][y] = 'X';
     }
 }
+
+void print_matrix();
+{
+    int t;
+
+    for(t = 0; t < 3; t++)
+    {
+        print(" %c | %c | %c", matrix[t][0], matrix[t][1], matrix[t][2]);
+
+        if(t != 2)
+        {
+            printf("\n-|-|-\n");
+        }
+    }
+    
+    printf("\n");
+}
