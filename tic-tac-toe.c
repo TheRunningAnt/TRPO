@@ -32,11 +32,11 @@ void computer_turn()
     }
 }
 
-void player_turn()
+void player1_turn()
 {
     int x, y;
 
-    printf("Ваш ход:\n");
+    printf("Ход 1-го игрока:\n");
     printf("X: ");
     scanf("%d", &x);
     printf("Y: ");
@@ -53,6 +53,30 @@ void player_turn()
     else
     {
         matrix[x][y] = 'X';
+    }
+}
+
+void player2_turn()
+{
+    int x, y;
+
+    printf("Ход 2-го игрока:\n");
+    printf("X: ");
+    scanf("%d", &x);
+    printf("Y: ");
+    scanf("%d", &y);
+
+    x--;
+    y--;
+
+    if(x < 0 || y < 0 || x > 2 || y > 2 || matrix[x][y] != SPACE)
+    {
+        printf("Неправильный ход, попробуйте ещё раз\n");
+        player_turn();
+    }
+    else
+    {
+        matrix[x][y] = 'O';
     }
 }
 
