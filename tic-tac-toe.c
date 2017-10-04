@@ -56,7 +56,7 @@ void player_turn()
     }
 }
 
-void print_matrix();
+void print_matrix()
 {
     int t;
 
@@ -71,4 +71,42 @@ void print_matrix();
     }
     
     printf("\n");
+}
+
+char win_check()
+{
+    int t;
+    char *p;
+
+    for(t = 0; t < 3; t++) //проверка строк
+    {
+        p = &matrix[t][0];
+        
+        if(*p == *(p+1) && *(p+1) == *(p+2))
+        {
+            return *p;
+        }
+    }
+
+    for(t = 0; t < 3; t++) //проверка столбцов
+    {
+        p = &matrix[0][t];
+
+        if(*p == *(p+3) && *(p+3) == *(p+6))
+        {
+            return *p;
+        }
+    }
+    
+    if(matrix[0][0] == matrix[1][1] && matrix[1][1] == matrix[2][2]) //проверка диагоналей
+    {
+        return matrix[0][0];
+    }
+
+    if(matrix[0][2] == matrix[1][1] && matrix[1][1] == matrix[2][0])
+    {
+        return matrix[0][2];
+    }
+
+    return SPACE;
 }
