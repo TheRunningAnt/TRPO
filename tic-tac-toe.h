@@ -1,5 +1,5 @@
-#define TIC_TAC_TOE
-#ifndef TIC_TAC_TOE
+#define TIC_TAC_TOE_H
+#ifndef TIC_TAC_TOE_H
 
 void computer_turn();
 

@@ -36,7 +36,7 @@ void player_turn()
 {
     int x, y;
 
-    printf("Ваш ход:\n")
+    printf("Ваш ход:\n");
     printf("X: ");
     scanf("%d", &x);
     printf("Y: ");
@@ -62,11 +62,11 @@ void print_matrix()
 
     for(t = 0; t < 3; t++)
     {
-        print(" %c | %c | %c", matrix[t][0], matrix[t][1], matrix[t][2]);
+        printf(" %c | %c | %c", matrix[t][0], matrix[t][1], matrix[t][2]);
 
         if(t != 2)
         {
-            printf("\n-|-|-\n");
+            printf("\n - | - |- \n");
         }
     }
     

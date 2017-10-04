@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "tic-tac-toe.h"
+
+#define SPACE ' '
 
 int main()
 {
@@ -15,7 +18,7 @@ int main()
         print_matrix();
         player_turn();
 
-        done = check();
+        done = win_check();
 
         if(done != SPACE)
         {
@@ -24,7 +27,7 @@ int main()
 
         computer_turn();
 
-        done = check();
+        done = win_check();
     } while(done == SPACE);
 
     if(done == 'X')
