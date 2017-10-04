@@ -48,7 +48,7 @@ void player1_turn()
     if(x < 0 || y < 0 || x > 2 || y > 2 || matrix[x][y] != SPACE)
     {
         printf("Неправильный ход, попробуйте ещё раз\n");
-        player_turn();
+        player1_turn();
     }
     else
     {
@@ -72,7 +72,7 @@ void player2_turn()
     if(x < 0 || y < 0 || x > 2 || y > 2 || matrix[x][y] != SPACE)
     {
         printf("Неправильный ход, попробуйте ещё раз\n");
-        player_turn();
+        player2_turn();
     }
     else
     {
@@ -90,7 +90,7 @@ void print_matrix()
 
         if(t != 2)
         {
-            printf("\n - | - |- \n");
+            printf("\n - | - | - \n");
         }
     }
     
@@ -99,7 +99,7 @@ void print_matrix()
 
 char win_check()
 {
-    int t;
+    int t, i, flag = 0, flag_false = 0;
     char *p;
 
     for(t = 0; t < 3; t++) //проверка строк
@@ -130,6 +130,27 @@ char win_check()
     if(matrix[0][2] == matrix[1][1] && matrix[1][1] == matrix[2][0])
     {
         return matrix[0][2];
+    }
+
+    for(i = 0; i < 3; i++)
+    {
+        for(t = 0; t < 3; t++)
+        {
+            if(matrix[t][i] == SPACE)
+            {
+                flag = 1;
+            }
+            else
+            {
+                flag_false = 1;
+            }
+        }
+    }
+
+    if(flag_false == 1 && flag != 1)
+    {
+        printf("\nНичья!\n");
+        exit(0);
     }
 
     return SPACE;
