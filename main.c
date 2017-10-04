@@ -26,4 +26,17 @@ int main()
 
         done = check();
     } while(done == SPACE);
+
+    if(done == 'X')
+    {
+        printf("Вы выиграли!\n\n");
+    }
+    else
+    {
+        printf("Вы проиграли...\n\n");
+    }
+
+    print_matrix();
+
+    return 0;
 }
