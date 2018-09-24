@@ -10,6 +10,24 @@ char matrix[3][3] = {
     {SPACE, SPACE, SPACE}
 };
 
+int coordinate_check(int x, int y)
+{
+    if(x < 0 || y < 0 || x > 2 || y > 2)
+    {
+        return -1;
+    } else
+        return 0;
+}
+
+int is_space_check(int x, int y)
+{
+    if(matrix[x][y] != SPACE)
+    {
+        return -1;
+    } else
+        return 0;
+}
+
 void computer_turn()
 {
     register int t;
@@ -53,12 +71,11 @@ void player1_turn()
     x--;
     y--;
 
-    if(x < 0 || y < 0 || x > 2 || y > 2 || matrix[x][y] != SPACE)
+    if(coordinate_check(x, y) || is_space_check(x, y) == -1)
     {
         printf("Неправильный ход, попробуйте ещё раз\n");
         player1_turn();
-    }
-    else
+    } else
     {
         matrix[x][y] = 'X';
     }
@@ -85,14 +102,13 @@ void player2_turn()
     x--;
     y--;
 
-    if(x < 0 || y < 0 || x > 2 || y > 2 || matrix[x][y] != SPACE)
+    if(coordinate_check(x, y) || is_space_check(x, y) == -1)
     {
         printf("Неправильный ход, попробуйте ещё раз\n");
-        player2_turn();
-    }
-    else
+        player1_turn();
+    } else
     {
-        matrix[x][y] = 'O';
+        matrix[x][y] = 'X';
     }
 }
 
