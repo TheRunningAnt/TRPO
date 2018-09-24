@@ -19,9 +19,9 @@ int coordinate_check(int x, int y)
         return 0;
 }
 
-int is_space_check(int x, int y)
+int is_space_check(int x, int y, char mat[3][3])
 {
-    if(matrix[x][y] != SPACE)
+    if(mat[x][y] != SPACE)
     {
         return -1;
     } else
@@ -71,7 +71,7 @@ void player1_turn()
     x--;
     y--;
 
-    if(coordinate_check(x, y) || is_space_check(x, y) == -1)
+    if(coordinate_check(x, y) || is_space_check(x, y, matrix) == -1)
     {
         printf("Неправильный ход, попробуйте ещё раз\n");
         player1_turn();
@@ -102,7 +102,7 @@ void player2_turn()
     x--;
     y--;
 
-    if(coordinate_check(x, y) || is_space_check(x, y) == -1)
+    if(coordinate_check(x, y) || is_space_check(x, y, matrix) == -1)
     {
         printf("Неправильный ход, попробуйте ещё раз\n");
         player1_turn();
