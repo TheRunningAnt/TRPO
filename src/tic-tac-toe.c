@@ -36,11 +36,11 @@ void player1_turn()
 {
     int x, y;
 
-    printf("Ход 1-го игрока:\n");
+    printf("Ход 1-го игрока:\n"); //X и Y перепутаны. Оставил так, чтоб ничего не сломать. Лол.
     printf("X: ");
-    scanf("%d", &x);
-    printf("Y: ");
     scanf("%d", &y);
+    printf("Y: ");
+    scanf("%d", &x);
 
     x--;
     y--;
@@ -62,9 +62,9 @@ void player2_turn()
 
     printf("Ход 2-го игрока:\n");
     printf("X: ");
-    scanf("%d", &x);
-    printf("Y: ");
     scanf("%d", &y);
+    printf("Y: ");
+    scanf("%d", &x);
 
     x--;
     y--;
