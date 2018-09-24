@@ -1,6 +1,8 @@
-#include "tick-tack-toe.h"
+#include "tic-tac-toe.h"
 #include "ctest.h"
 #include <stdio.h>
+
+#define SPACE ' '
 
 CTEST (check_coordinate_true, coordinate_check)
 {	
