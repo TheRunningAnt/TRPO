@@ -1,9 +1,9 @@
-#define TIC_TAC_TOE_H
 #ifndef TIC_TAC_TOE_H
+#define TIC_TAC_TOE_H
 
 int coordinate_check(int x, int y);
 
-int is_space_check(int x, int y)
+int is_space_check(int x, int y, char mat[3][3]);
 
 void computer_turn();
 
