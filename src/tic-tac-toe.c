@@ -105,10 +105,10 @@ void player2_turn()
     if(coordinate_check(x, y) || is_space_check(x, y) == -1)
     {
         printf("Неправильный ход, попробуйте ещё раз\n");
-        player1_turn();
+        player2_turn();
     } else
     {
-        matrix[x][y] = 'X';
+        matrix[x][y] = 'O';
     }
 }
 
