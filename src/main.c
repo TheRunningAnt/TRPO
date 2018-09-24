@@ -1,6 +1,6 @@
+#include "tic-tac-toe.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "tic-tac-toe.h"
 
 #define SPACE ' '
 
@@ -39,11 +39,11 @@ int main()
 
         if(done == 'X')
         {
-            printf("Вы выиграли!\n\n");
+            printf("\nВы выиграли!\n\n");
         }
         else
         {
-            printf("Вы проиграли...\n\n");
+            printf("\nВы проиграли...\n\n");
         }
 
         print_matrix();
