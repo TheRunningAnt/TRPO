@@ -1,5 +1,5 @@
 # Крестики-нолики
-***Travis CI*** [![Build Status](https://api.travis-ci.org/TheRunningAnt/TRPO.svg?branch=master](https://travis-ci.org/TheRunningAnt/TRPO)
+***Travis CI*** [![Build Status](https://travis-ci.org/TheRunningAnt/TRPO.svg?branch=master](https://travis-ci.org/TheRunningAnt/TRPO)
 ## O проекте
 *Проект представляет собой простую реализацию игры "крестики-нолики". Программа написана на языке программирования C.*
 ## Игровая механика
