@@ -54,7 +54,7 @@ int main()
         do
         {
             print_matrix();
-            player1_turn();
+            player1_turn();               
 
             done = win_check();
 

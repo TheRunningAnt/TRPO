@@ -38,9 +38,17 @@ void player1_turn()
 
     printf("Ход 1-го игрока:\n"); //X и Y перепутаны. Оставил так, чтоб ничего не сломать. Лол.
     printf("X: ");
-    scanf("%d", &y);
+    if(scanf("%d", &y) != 1)
+    {
+        printf("Неверные данные\n");
+        abort();
+    }
     printf("Y: ");
-    scanf("%d", &x);
+    if(scanf("%d", &x) != 1)
+    {
+        printf("Неверные данные\n");
+        abort();
+    }
 
     x--;
     y--;
@@ -62,9 +70,17 @@ void player2_turn()
 
     printf("Ход 2-го игрока:\n");
     printf("X: ");
-    scanf("%d", &y);
+    if(scanf("%d", &y) != 1)
+    {
+        printf("Неверные данные\n");
+        abort();
+    }
     printf("Y: ");
-    scanf("%d", &x);
+    if(scanf("%d", &x) != 1)
+    {
+        printf("Неверные данные\n");
+        abort();
+    }
 
     x--;
     y--;
